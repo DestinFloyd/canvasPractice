@@ -1,0 +1,159 @@
+
+@keyframes bounce {
+    0% {
+      top: 0;
+      animation-timing-function: ease-out;
+    }
+    17% {
+      top: 15px;
+      animation-timing-function: ease-in;
+    }
+    34% {
+      top: 0;
+      animation-timing-function: ease-out;
+    }
+    51% {
+      top: 8px;
+      animation-timing-function: ease-in;
+    }
+    68% {
+      top: 0px;
+       }
+    85% {
+      top: 3px;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      top: 0;
+    }
+}
+
+#container { position:relative; }
+.box { 
+    position: relative;
+    float:left;
+    background:chartreuse; 
+    width:50px;
+    height:50px;
+    margin-right:5px;
+}
+.box2 { 
+  position: relative;
+  float:left;
+  background:purple; 
+  width:50px;
+  height:50px;
+  margin-right:5px;
+}
+.box.animated { 
+    animation: up 1s;
+}
+.box2.animated { 
+  animation: down 1s;
+}
+
+@keyframes up {
+  0%{
+      transform: rotate(360deg)
+  }
+}
+@keyframes down {
+  0%{
+      transform: rotate(-360deg)
+  }
+} 
+
+#container2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.a{
+ width: 0;
+ height: 0;
+ border-left: 50px solid transparent;
+ border-right: 50px solid transparent;
+ border-bottom: 100px solid purple;
+}
+
+.b{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid chartreuse;
+} 
+.c{
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid blue;
+  transform: translate(75px, -100px);
+  position: relative;
+  z-index: 1;
+}
+.d{
+ 
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid blue;
+  transform: translate(75px, -100px);
+  position: relative;
+  z-index: 1;
+}
+.e{
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid blue;
+  transform: translate(-25px, -250px);
+  position: relative;
+  z-index: 1;
+}
+.f{
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid blue;
+  transform: translate(-25px, -350px);
+  position: relative;
+  z-index: 1;
+}
+
+.a.animated { 
+  animation: up 1s;
+}
+.b.animated { 
+animation: down 1s;
+}
+.holder{
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================== */
+/* https://stackoverflow.com/questions/7694323/css3-animation-on-hover-force-entire-animation */
+
+/* ============================================== */
+/* .a.animated:hover{
+    animation: up 2.5s;
+}
+.b.animated:hover{
+    animation: down 2.5s;
+}
+@keyframes up {
+    0%{
+        transform: rotate(360deg)
+    }
+}
+@keyframes down {
+    0%{
+        transform: rotate(-360deg)
+    }
+}  */
